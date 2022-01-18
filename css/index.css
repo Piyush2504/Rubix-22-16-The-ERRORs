@@ -5,6 +5,22 @@
     position: fixed;
     width: 100%;
     z-index: 2;
+    background-color: rgb(26, 26, 26);
+}
+#Homenav #where{
+    color: #8AFFFE;
+}
+#home{
+    color: #8AFFFE;
+}
+#Events{
+    color: #8AFFFE;
+}
+#Hotels{
+    color: #8AFFFE;
+}
+#Map{
+    color: #8AFFFE;
 }
 .carouselEx{
     background-color: rgba(0, 0, 0, 0.050);
@@ -33,7 +49,7 @@
     padding-right: 150px;
 }
 #cards .card{
-    background-color: ;
+    /* background-color: ; */
     border: none;
     width: 18rem; 
     padding: 5px; 
@@ -50,4 +66,8 @@
 #mp3{
     height: 75%; 
     border-radius: 15px;
+}
+#foot{
+    margin-top: 100px;
+    background-color: #37c4c1;
 }
