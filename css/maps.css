@@ -1,11 +1,30 @@
-#map {
-    height: 500px;
-}
 
 body {
     font: 16px;
-    background: #f3f5f6;
 }
+#HomeNav{
+    width: 100%;
+    background-color: rgb(26, 26, 26);
+}
+#Homenav #where{
+    color: #8AFFFE;
+}
+#home{
+    color: #8AFFFE;
+}
+#Events{
+    color: #8AFFFE;
+}
+#Hotels{
+    color: #8AFFFE;
+}
+#Map{
+    color: #8AFFFE;
+}
+#map {
+    height: 700px;
+}
+
 
 .autocomplete-container {
     /*the container must be positioned relative:*/
@@ -85,4 +104,9 @@ body {
     margin: 15px 30px 20px 30px;
     border-radius: 30px;
     border-color: rgba(0, 0, 0, 0.507);
+}
+#foot{
+
+    margin-top: 100px;
+    background-color: black;
 }
