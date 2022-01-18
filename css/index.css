@@ -1,0 +1,53 @@
+.body{
+    background-color: #8AFFFE;/*B4C7F8 E8F8B4 F5D0F6 8AFFFE */
+}
+#HomeNav{
+    position: fixed;
+    width: 100%;
+    z-index: 2;
+}
+.carouselEx{
+    background-color: rgba(0, 0, 0, 0.050);
+    padding: 30px;
+}
+#carouselExampleIndicators{
+    width:1300px; 
+    padding-top: 60px; 
+    margin-left: 75px;
+}
+.carousel-inner{
+    border-radius: 50px;
+}
+/* #carouselExampleIndicators{
+    padding-top: 70x; 
+} */
+
+#cards{
+    margin-top: 50px;
+    width: 100%; 
+    display: inline-flex; 
+    background-color: rgba(0, 0, 0, 0); 
+    padding:10px; 
+    justify-content: space-between; 
+    padding-left: 150px; 
+    padding-right: 150px;
+}
+#cards .card{
+    background-color: ;
+    border: none;
+    width: 18rem; 
+    padding: 5px; 
+    border-radius: 20px; 
+    box-shadow: 0px 5px 15px 0px rgb(44, 44, 44);
+}
+#pic3{
+    height:75%;  
+    border-radius: 15px;
+}
+#pic4{
+    border-radius: 15px;
+}
+#mp3{
+    height: 75%; 
+    border-radius: 15px;
+}
