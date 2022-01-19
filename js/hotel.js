@@ -24,11 +24,8 @@ function getHotelDetails(latlng_) {
                 hname = data[i].name;
                 hotel_class = data[i].hotel_class;
                 address = data[i].location_string;
-                // contact_information = data[i].location_string;
                 price_range = data[i].price;
                 photos = data[i].photo.images.original.url;
-                lat = data[i].latitude;
-                lng = data[i].longitude;
 
                 var card = document.createElement('div');
                 card.innerHTML = `<div class="card mb-3" style="margin-left: 5vh; max-width: 540px;">
@@ -48,8 +45,6 @@ function getHotelDetails(latlng_) {
                                     </div>`
 
                 cardDiv.appendChild(card);
-                console.log(hname);
-                // console.log(i, hname, hotel_class, address, price_range, lat, lng, photos);
             } catch (e) { console.log(e) }
         }
     });

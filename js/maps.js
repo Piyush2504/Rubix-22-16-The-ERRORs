@@ -1,7 +1,7 @@
 var apiKey = "c74eb5ef64004d9db29411a5af3926da";
 
-lat = 19.9975;
-lng = 73.7898;
+lat = 19.0760;
+lng = 72.8777;
 
 var isRetina = L.Browser.retina;
 var baseUrl =
@@ -15,8 +15,6 @@ L.tileLayer(isRetina ? retinaUrl : baseUrl, {
     maxZoom: 20,
     id: "osm-bright",
 }).addTo(map);
-
-// var marker = L.marker([lat, lng]).addTo(map);
 
 function addressAutocomplete(containerElement, callback, options) {
     // create input element

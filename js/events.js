@@ -17,18 +17,36 @@ function getHotelDetails(latlng_) {
     $.ajax(settings).done(function(response) {
         console.log(response);
         data = response.data;
+        var cardDiv = document.getElementById("cardDiv");
+        cardDiv.innerHTML = ""
         for (var i = 0; i < data.length; i++) {
             try {
                 ename = data[i].name;
                 address = data[i].address;
-                // contact_number = data[i].phone;
                 photos = data[i].photo.images.original.url;
-                lat = data[i].latitude;
-                lng = data[i].longitude;
                 description = data[i].description;
                 no_reviews = data[i].num_reviews;
                 rating = data[i].rating;
-                console.log(i, ename, address, description, no_reviews, rating, lat, lng, photos);
+
+                var card = document.createElement('div');
+                card.innerHTML = `<div class="card mb-3" style="margin-left: 5vh; max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="${photos}" class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title" id="cardid1">${ename}</h5>
+                                                    <p class="card-text">${price_range}</p>
+                                                    <p class="card-text">${description}</p>
+                                                    <p class="card-text">${address}</p>
+                                                    <p class="card-text"><small class="text-muted">${rating}</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`
+
+                cardDiv.appendChild(card);
             } catch (e) { console.log(e) }
         }
     });
