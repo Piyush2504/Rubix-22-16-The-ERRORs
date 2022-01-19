@@ -37,7 +37,6 @@ function getHotelDetails(latlng_) {
                                             <div class="col-md-8">
                                                 <div class="card-body">
                                                     <h5 class="card-title" id="cardid1">${ename}</h5>
-                                                    <p class="card-text">${price_range}</p>
                                                     <p class="card-text">${description}</p>
                                                     <p class="card-text">${address}</p>
                                                     <p class="card-text"><small class="text-muted">${rating}</small></p>
