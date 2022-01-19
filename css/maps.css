@@ -6,7 +6,25 @@ body {
     font: 16px;
     background: #f3f5f6;
 }
-
+#HomeNav{
+    background-color: rgb(26, 26, 26);
+}
+#Homenav #where{
+    color: #65837b;
+}
+#home{
+   
+    color:#65837b;
+}
+#Events{
+    color: #65837b;
+}
+#Hotels{
+    color: #65837b;
+}
+#Map{
+    color: #65837b;
+}
 .autocomplete-container {
     /*the container must be positioned relative:*/
     position: relative;
@@ -74,7 +92,7 @@ body {
 }
 .b1 {
     
-    margin: 5px 5px 5px 20px;
+  margin: 5px 5px 5px 20px;
   padding: 4px;
   border-radius: 10px;
   color: black;
