@@ -16,8 +16,7 @@ L.tileLayer(isRetina ? retinaUrl : baseUrl, {
     id: "osm-bright",
 }).addTo(map);
 
-var popup = L.popup();
-
+// var marker = L.marker([lat, lng]).addTo(map);
 
 function addressAutocomplete(containerElement, callback, options) {
     // create input element
@@ -215,6 +214,14 @@ function addressAutocomplete(containerElement, callback, options) {
 var from_;
 var to_;
 
+addressAutocomplete(document.getElementById("autocomplete-container-city"), (data) => {
+    console.log("Selected city: ");
+    console.log(data);
+    getNearByInfo(data.properties.lat.toFixed(7), data.properties.lon.toFixed(7));
+}, {
+    placeholder: "Search for City"
+});
+
 addressAutocomplete(document.getElementById("autocomplete-container-city1"), (data) => {
     console.log("Selected city: ");
     console.log(data);
@@ -249,15 +256,6 @@ function markPosition(position) {
     const marker = L.marker([lat, lng], {
         icon: markerIcon
     }).bindPopup(MarkerPopup).addTo(map);
-
-    var requestOptions = {
-        method: 'GET',
-    };
-
-    fetch("https://api.geoapify.com/v2/places?categories=commercial.supermarket&filter=rect%3A10.716463143326969%2C48.755151258420966%2C10.835314015356737%2C48.680903341613316&limit=20&apiKey=c74eb5ef64004d9db29411a5af3926da", requestOptions)
-        .then(response => response.json())
-        .then(result => console.log(result))
-        .catch(error => console.log('error', error));
 }
 routingControl = null;
 
@@ -293,5 +291,44 @@ function currentLocation() {
         const marker = L.marker(ev.latlng, {
             icon: userIcon
         }).bindPopup(userPopup).addTo(map);
+    })
+}
+
+function getNearByInfo(lat, lng) {
+    try {
+        if (marker != null) {
+            map.removeLayer(marker);
+        }
+    } catch (e) {}
+    map.panTo([lat, lng], 13);
+
+    var requestOptions = {
+        method: 'GET',
+    };
+    console.log(lat, lng);
+    console.log(`https://api.geoapify.com/v2/places?categories=tourism&filter=circle:${lng},${lat},5000&limit=20&apiKey=${apiKey}`)
+    fetch(`https://api.geoapify.com/v2/places?categories=tourism&filter=circle:${lng},${lat},5000&limit=50&apiKey=${apiKey}`, requestOptions)
+        .then(response => response.json())
+        .then(result => {
+            console.log(result);
+            const markerIcon = L.icon({
+                iconUrl: `https://api.geoapify.com/v1/icon/?type=material&color=red&icon=attractions&apiKey=${apiKey}`,
+            });
+            for (var i = 0; i <= result.features.length; ++i) {
+                const MarkerPopup = L.popup().setContent(result.features[i].properties.address_line1);
+                const marker = L.marker([result.features[i].properties.lat, result.features[i].properties.lon], {
+                    icon: markerIcon
+                }).bindPopup(MarkerPopup).addTo(map);
+            }
+        })
+        .catch(error => console.log('error', error));
+
+}
+
+function selectCurrentLocation() {
+    map.locate({ setView: true, maxZoom: 15, enableHighAccuracy: true });
+    map.on('locationfound', function(ev) {
+        document.getElementById("autocomplete-container-city1").querySelector('input').value = "Your Location";
+        from_ = ev.latlng;
     })
 }
