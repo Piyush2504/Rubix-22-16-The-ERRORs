@@ -61,12 +61,11 @@
 
 .card-group {
     /* background-color: ; */
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 5vw;
+    margin-right: 5vw;
 }
 
 .card {
-    border-radius: 2vh;
     padding: 1vh;
     margin: 5vh;
     box-shadow: 4px 4px 0px 0px rgba(80, 79, 79, 0.753);

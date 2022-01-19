@@ -28,7 +28,7 @@ function getHotelDetails(latlng_) {
                 photos = data[i].photo.images.original.url;
 
                 var card = document.createElement('div');
-                card.innerHTML = `<div class="card mb-3" style="margin-left: 5vh; max-width: 540px;">
+                card.innerHTML = `<div class="card mb-3" style="margin-left: 5vw; margin-top:5vh ; max-width: 85vw; box-shadow: 4px 4px 4px 4px rgba(80, 79, 79, 0.753);">
                                         <div class="row g-0">
                                             <div class="col-md-4">
                                                 <img src="${photos}" class="img-fluid rounded-start" alt="...">
