@@ -1,5 +1,5 @@
 .body{
-    background-color: #8AFFFE;/*B4C7F8 E8F8B4 F5D0F6 8AFFFE */
+    background-color: whitesmoke;/*B4C7F8 E8F8B4 F5D0F6 8AFFFE */
 }
 #HomeNav{
     position: fixed;
@@ -8,19 +8,20 @@
     background-color: rgb(26, 26, 26);
 }
 #Homenav #where{
-    color: #8AFFFE;
+    color: #65837b;
 }
 #home{
-    color: #8AFFFE;
+   
+    color:#65837b;
 }
 #Events{
-    color: #8AFFFE;
+    color: #65837b;
 }
 #Hotels{
-    color: #8AFFFE;
+    color: #65837b;
 }
 #Map{
-    color: #8AFFFE;
+    color: #65837b;
 }
 .carouselEx{
     background-color: rgba(0, 0, 0, 0.050);
@@ -69,5 +70,5 @@
 }
 #foot{
     margin-top: 100px;
-    background-color: #37c4c1;
+    background-color: rgba(105, 80, 80, 0.055);
 }
