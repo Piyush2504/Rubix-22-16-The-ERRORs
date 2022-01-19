@@ -68,3 +68,64 @@ body {
 .clear-button:hover {
     color: rgba(0, 0, 0, 0.6);
 }
+#HomeNav {
+    
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(26, 26, 26);
+}
+.b3 {
+    
+    margin: 5px 5px 5px 50px;
+    padding: 4px;
+    border-radius: 10px;
+    color: black;
+    background-color: azure;
+  }
+
+#HomeNav {
+    width: 100%;
+    z-index: 2;
+    background-color: rgb(26, 26, 26);
+}
+
+#Homenav #where {
+    color: #65837b;
+}
+
+#home {
+    color: #65837b;
+}
+
+#home:hover {
+    color: white;
+}
+
+#Events {
+    color: #65837b;
+}
+
+#Events:hover {
+    color: white;
+}
+
+#Hotels {
+    color: #65837b;
+}
+
+#Hotels:hover {
+    color: white;
+}
+
+#Map:hover {
+    color: white;
+}
+
+#Map {
+    color: #65837b;
+}
+
+#foot {
+    margin-top: 100vh;
+    background-color: rgba(105, 80, 80, 0.055);
+}
