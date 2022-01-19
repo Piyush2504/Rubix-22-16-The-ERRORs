@@ -78,7 +78,6 @@ body {
     background-color: azure;
   }
 
-  
 #HomeNav {
     width: 100%;
     z-index: 2;
@@ -119,4 +118,9 @@ body {
 
 #Map {
     color: #65837b;
+}
+
+#foot {
+    margin-top: 100vh;
+    background-color: rgba(105, 80, 80, 0.055);
 }
