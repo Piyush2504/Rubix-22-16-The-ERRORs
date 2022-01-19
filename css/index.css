@@ -37,18 +37,16 @@
 
 .carouselEx{
     background-color: rgba(0, 0, 0, 0.050);
-    padding: 30px;
+    
 }
 #carouselExampleIndicators{
-    width:100vw; 
+    width:98.9vw; 
     padding-top: 60px; 
 }
 .carousel-inner{
     border-radius: 50px;
 }
-/* #carouselExampleIndicators{
-    padding-top: 70x; 
-} */
+
 
 
 .card-group{
@@ -61,6 +59,7 @@
     border-radius: 2vh;
     padding: 1vh;
     margin: 5vh;
+    box-shadow: 0px 4px 5px 5px rgb(80, 79, 79);
 }
 #pic3{
     height:50vh;  
@@ -75,6 +74,6 @@
     border-radius: 15px;
 }
 #foot{
-    margin-top: 100px;
+    margin-top: 25vh;
     background-color: rgba(105, 80, 80, 0.055);
 }
