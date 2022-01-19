@@ -17,8 +17,9 @@ function getHotelDetails(latlng_) {
     $.ajax(settings).done(function(response) {
         console.log(response);
         data = response.data;
+        var cardDiv = document.getElementById("cardDiv");
+        cardDiv.innerHTML = ""
         for (var i = 0; i < data.length; i++) {
-            var cardDiv = document.getElementById("cardDiv");
             try {
                 hname = data[i].name;
                 hotel_class = data[i].hotel_class;
