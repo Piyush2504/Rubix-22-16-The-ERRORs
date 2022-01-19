@@ -40,9 +40,8 @@
     padding: 30px;
 }
 #carouselExampleIndicators{
-    width:1300px; 
+    width:100vw; 
     padding-top: 60px; 
-    margin-left: 75px;
 }
 .carousel-inner{
     border-radius: 50px;
@@ -51,33 +50,28 @@
     padding-top: 70x; 
 } */
 
-#cards{
-    margin-top: 50px;
-    width: 100%; 
-    display: inline-flex; 
-    background-color: rgba(0, 0, 0, 0); 
-    padding:10px; 
-    justify-content: space-between; 
-    padding-left: 150px; 
-    padding-right: 150px;
-}
-#cards .card{
+
+.card-group{
     /* background-color: ; */
-    border: none;
-    width: 18rem; 
-    padding: 5px; 
-    border-radius: 20px; 
-    box-shadow: 0px 5px 15px 0px rgb(44, 44, 44);
+    margin-left: 10vh;
+    margin-right: 10vh;
+    
+}
+.card{
+    border-radius: 2vh;
+    padding: 1vh;
+    margin: 5vh;
 }
 #pic3{
-    height:75%;  
+    height:50vh;  
     border-radius: 15px;
 }
 #pic4{
+    height: 50vh;
     border-radius: 15px;
 }
 #mp3{
-    height: 75%; 
+    height: 50vh; 
     border-radius: 15px;
 }
 #foot{
