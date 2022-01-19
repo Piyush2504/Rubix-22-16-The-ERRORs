@@ -6,7 +6,7 @@ function getHotelDetails(latlng_) {
     const settings = {
         "async": true,
         "crossDomain": true,
-        "url": `https://travel-advisor.p.rapidapi.com/hotels/list-by-latlng?latitude=${latlng_[0]}&longitude=${latlng_[1]}`,
+        "url": `https://travel-advisor.p.rapidapi.com/hotels/list-by-latlng?latitude=${latlng_[0]}&longitude=${latlng_[1]}&lunit=km&currency=INR&lang=en_US`,
         "method": "GET",
         "headers": {
             "x-rapidapi-host": "travel-advisor.p.rapidapi.com",
