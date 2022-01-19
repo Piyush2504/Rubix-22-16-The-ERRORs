@@ -18,6 +18,7 @@ function getHotelDetails(latlng_) {
         console.log(response);
         data = response.data;
         for (var i = 0; i < data.length; i++) {
+            var cardDiv = document.getElementById("cardDiv");
             try {
                 hname = data[i].name;
                 hotel_class = data[i].hotel_class;
@@ -27,7 +28,26 @@ function getHotelDetails(latlng_) {
                 photos = data[i].photo.images.original.url;
                 lat = data[i].latitude;
                 lng = data[i].longitude;
-                console.log(i, hname, hotel_class, address, price_range, lat, lng, photos);
+
+                var card = document.createElement('div');
+                card.innerHTML = `<div class="card mb-3" style="margin-left: 5vh; max-width: 540px;">
+                                        <div class="row g-0">
+                                            <div class="col-md-4">
+                                                <img src="${photos}" class="img-fluid rounded-start" alt="...">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <div class="card-body">
+                                                    <h5 class="card-title" id="cardid1">${hname}</h5>
+                                                    <p class="card-text">${price_range}</p>
+                                                    <p class="card-text"><small class="text-muted">${hotel_class}</small></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>`
+
+                cardDiv.appendChild(card);
+                console.log(hname);
+                // console.log(i, hname, hotel_class, address, price_range, lat, lng, photos);
             } catch (e) { console.log(e) }
         }
     });
