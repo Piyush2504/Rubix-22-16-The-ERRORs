@@ -328,6 +328,16 @@ function getNearByInfo(lat, lng) {
 function selectCurrentLocation() {
     map.locate({ setView: true, maxZoom: 15, enableHighAccuracy: true });
     map.on('locationfound', function(ev) {
+        try {
+            map.removeLayer(marker);
+        } catch (e) {}
+        const userIcon = L.icon({
+            iconUrl: `https://api.geoapify.com/v1/icon/?type=circle&color=%230040ff&icon=user&iconType=awesome&noShadow&apiKey=${apiKey}`,
+        });
+        const userPopup = L.popup().setContent("Your Location");
+        const marker = L.marker(ev.latlng, {
+            icon: userIcon
+        }).bindPopup(userPopup).addTo(map);
         document.getElementById("autocomplete-container-city1").querySelector('input').value = "Your Location";
         from_ = ev.latlng;
     })
