@@ -12,30 +12,7 @@ body {
 #Homenav #where{
     color: #65837b;
 }
-#home{
-    color:#65837b;
-}
-#home:hover{
-    color: white;
-}
-#Events{
-    color: #65837b;
-}
-#Events:hover{
-    color: white;
-}
-#Hotels{
-    color: #65837b;
-}
-#Hotels:hover{
-    color: white;
-}
-#Map:hover{
-    color: white;
-}
-#Map{
-    color: #65837b;
-}
+
 .autocomplete-container {
     /*the container must be positioned relative:*/
     position: relative;
