@@ -15,7 +15,6 @@ function getHotelDetails(latlng_) {
     };
 
     $.ajax(settings).done(function(response) {
-        console.log(response);
         data = response.data;
         var cardDiv = document.getElementById("cardDiv");
         cardDiv.innerHTML = ""
@@ -244,8 +243,6 @@ function addressAutocomplete(containerElement, callback, options) {
 }
 
 addressAutocomplete(document.getElementById("autocomplete-container-city"), (data) => {
-    console.log("Selected city: ");
-    console.log(data);
     latlng_ = [data.properties.lat, data.properties.lon];
     getHotelDetails(latlng_);
 }, {

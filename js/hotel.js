@@ -15,7 +15,6 @@ function getHotelDetails(latlng_) {
     };
 
     $.ajax(settings).done(function(response) {
-        console.log(response);
         data = response.data;
         var cardDiv = document.getElementById("cardDiv");
         cardDiv.innerHTML = ""
@@ -31,7 +30,7 @@ function getHotelDetails(latlng_) {
                 card.innerHTML = `<div class="card mb-3" style="margin-left: 5vw; margin-top:5vh ; max-width: 85vw; box-shadow: 4px 4px 4px 4px rgba(80, 79, 79, 0.753);">
                                         <div class="row g-0">
                                             <div class="col-md-4">
-                                                <img src="${photos}" class="img-fluid rounded-start" alt="...">
+                                                <img src="${photos}" class="img-fluid rounded-start" style="height:50vh;">
                                             </div>
                                             <div class="col-md-8">
                                                 <div class="card-body">
@@ -243,8 +242,6 @@ function addressAutocomplete(containerElement, callback, options) {
 }
 
 addressAutocomplete(document.getElementById("autocomplete-container-city"), (data) => {
-    console.log("Selected city: ");
-    console.log(data);
     latlng_ = [data.properties.lat, data.properties.lon];
     getHotelDetails(latlng_);
 }, {

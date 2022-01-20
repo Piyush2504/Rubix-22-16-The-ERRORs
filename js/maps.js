@@ -213,24 +213,18 @@ var from_;
 var to_;
 
 addressAutocomplete(document.getElementById("autocomplete-container-city"), (data) => {
-    console.log("Selected city: ");
-    console.log(data);
     getNearByInfo(data.properties.lat.toFixed(7), data.properties.lon.toFixed(7));
 }, {
     placeholder: "Search for City"
 });
 
 addressAutocomplete(document.getElementById("autocomplete-container-city1"), (data) => {
-    console.log("Selected city: ");
-    console.log(data);
     from_ = [data.properties.lat, data.properties.lon];
 }, {
     placeholder: "From"
 });
 
 addressAutocomplete(document.getElementById("autocomplete-container-city2"), (data) => {
-    console.log("Selected city: ");
-    console.log(data);
     to_ = [data.properties.lat, data.properties.lon];
 }, {
     placeholder: "To"
@@ -239,7 +233,6 @@ addressAutocomplete(document.getElementById("autocomplete-container-city2"), (da
 function markPosition(position) {
     lat = position.properties.lat;
     lng = position.properties.lon;
-    console.log(`Latitude: ${lat}, longitude: ${lng}`);
     if (marker != null) {
         map.removeLayer(marker);
     }
@@ -303,12 +296,9 @@ function getNearByInfo(lat, lng) {
     var requestOptions = {
         method: 'GET',
     };
-    console.log(lat, lng);
-    console.log(`https://api.geoapify.com/v2/places?categories=tourism&filter=circle:${lng},${lat},5000&limit=20&apiKey=${apiKey}`)
     fetch(`https://api.geoapify.com/v2/places?categories=tourism&filter=circle:${lng},${lat},5000&limit=50&apiKey=${apiKey}`, requestOptions)
         .then(response => response.json())
         .then(result => {
-            console.log(result);
             const markerIcon = L.icon({
                 iconUrl: `https://api.geoapify.com/v1/icon/?type=material&color=red&icon=attractions&apiKey=${apiKey}`,
             });
