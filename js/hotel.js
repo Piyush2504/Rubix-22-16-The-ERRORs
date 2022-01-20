@@ -21,7 +21,7 @@ function getHotelDetails(latlng_) {
         for (var i = 0; i < data.length; i++) {
             try {
                 hname = data[i].name;
-                hotel_class = data[i].hotel_class;
+                rating = data[i].rating;
                 address = data[i].location_string;
                 price_range = data[i].price;
                 photos = data[i].photo.images.original.url;
@@ -37,7 +37,7 @@ function getHotelDetails(latlng_) {
                                                     <h5 class="card-title" id="cardid1">${hname}</h5>
                                                     <p class="card-text">${price_range}</p>
                                                     <p class="card-text">${address}</p>
-                                                    <p class="card-text"><small class="text-muted">${hotel_class}</small></p>
+                                                    <p class="card-text"><small class="text-muted">${rating}</small></p>
                                                 </div>
                                             </div>
                                         </div>
